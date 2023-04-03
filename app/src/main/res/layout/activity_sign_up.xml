@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/appleGray"
+    tools:context=".SignUpActivity">
+
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/appleBlack"
+            android:fontFamily="@font/apple"/>
+
+        <TextView
+            android:id="@+id/captionLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a New Driver Account"
+            android:layout_gravity="center"
+            android:fontFamily="@font/apple"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/appleBlack"/>
+
+        <!--Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtName"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/captionLabelTv">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textCapCharacters" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Phone-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtPhone"
+            android:layout_below="@id/txtName"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Phone Number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Student ID-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtStudentId"
+            android:layout_below="@id/txtPhone"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Student ID"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTil"
+            android:layout_below="@id/txtStudentId"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Email Address"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTil"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTil">
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--SignUp Button-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:background="@drawable/shape_button02"
+            android:backgroundTint="@color/appleBlack"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/apple"
+            android:layout_below="@id/passwordTil"
+            android:layout_marginTop="10dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <!--Login-->
+    <TextView
+        android:id="@+id/haveAccountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/have_account"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/apple"/>
+
+</RelativeLayout>

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:padding="5dp"
+    tools:context=".ui.Home">
+
+    <!--upper nav-->
+    <io.github.florent37.shapeofview.shapes.ArcView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hello_home"
+                        android:textColor="#3a3b3c"
+                        android:fontFamily="@font/apple"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:id="@+id/profileNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="CHOO JUN SHENG"
+                        android:textColor="#3a3b3c"
+                        android:fontFamily="@font/comfortaa_light"/>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgProfile"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/shape_avatar_border_grey"
+                            android:padding="3dp"
+                            android:src="@drawable/profile" />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+<!--upper nav view-->
+    </io.github.florent37.shapeofview.shapes.ArcView>
+
+
+<!--upcoming latest trip-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.9"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+<!--upcoming trip-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#3a3b3c"
+                        android:fontFamily="@font/apple"
+                        android:text="@string/upcoming_trips"/>
+
+                    <TextView
+                        android:id="@+id/upcomingTripBtn"
+                        android:layout_width="match_parent"
+                        android:paddingRight="20dp"
+                        android:gravity="right"
+                        android:textColor="#3a3b3c"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expand"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/firstTripCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentPadding="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/above"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.95"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="0.45">
+
+                                    <TextView
+                                        android:layout_width="60dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content"
+                                        android:text="Trip ID"
+                                        android:fontFamily="@font/apple"
+                                        android:layout_weight="1"/>
+
+                                    <TextView
+                                        android:id="@+id/tripIdTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text="1234567890123"
+                                        android:paddingRight="10dp"
+                                        android:layout_weight="1"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="right"
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="0.55">
+
+                                    <TextView
+                                        android:id="@+id/tripDateTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text="13 Feb 2023"/>
+
+                                    <TextView
+                                        android:id="@+id/dateTimeLbl"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text=", "/>
+
+
+                                    <TextView
+                                        android:id="@+id/tripTimeTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text="12:30"/>
+
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/pickupTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/ic_baseline_pickup"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:gravity="center_vertical"
+                                    android:text="TARUMT Main Gate"
+                                    android:fontFamily="@font/apple"
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="1"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:drawableStart="@drawable/ic_baseline_to"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/appleBlack"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/dropoffTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="10dp"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:text="TARUMT Hostel"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/apple"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+<!--Existing Trip-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:textColor="#3a3b3c"
+                        android:text="@string/existing_trips"/>
+
+                    <TextView
+                        android:id="@+id/existingTripBtn"
+                        android:layout_width="match_parent"
+                        android:paddingRight="20dp"
+                        android:gravity="right"
+                        android:textColor="#3a3b3c"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expand"/>
+
+                </LinearLayout>
+
+                <!--About carpooling-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/existingTripCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.95"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.45"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="60dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/apple"
+                                        android:text="Trip ID"/>
+
+                                    <TextView
+                                        android:id="@+id/existingTripId"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/apple"
+                                        android:paddingRight="10dp"
+                                        android:text="1234567890123"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.55"
+                                    android:gravity="right"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="10dp">
+
+                                    <TextView
+                                        android:id="@+id/existingTripDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text="13 Feb 2023"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text=", "/>
+
+
+                                    <TextView
+                                        android:id="@+id/existingTripTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/apple"
+                                        android:text="12:30"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/existingPickup"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:drawableStart="@drawable/ic_baseline_pickup"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:fontFamily="@font/apple"
+                                    android:gravity="center_vertical"
+                                    android:paddingRight="10dp"
+                                    android:text="TARUMT Main Gate"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:drawableStart="@drawable/ic_baseline_to"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:fontFamily="@font/apple"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/appleBlack" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/existingDropoff"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="@color/itemTextColor"
+                                    android:fontFamily="@font/apple"
+                                    android:text="TARUMT Hostel"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:textColor="#3a3b3c"
+                        android:text="About Carpooling"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardElevation="10dp"
+                    android:layout_below="@id/nav_upper"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/aboutTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="3dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Carpooling" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/aboutTV"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/apple"
+                            android:text="Ridesharing can save time and money for you"/>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/family_car2" />
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+<!--Others-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:textColor="#3a3b3c"
+                        android:text="Others"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/viewTripBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/nav_upper"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/viewTripLbl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="3dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Your Trip" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/viewTripLbl"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/apple"
+                            android:text="View your trip, editing or cancel your trip as you want!" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/family_car" />
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

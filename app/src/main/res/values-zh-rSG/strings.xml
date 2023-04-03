@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TARUMT Carpooling Driver</string>
+    <string name="no_account"><b>注册</b></string>
+    <string name="have_account"><b>登入</b></string>
+    <string name="expand"><u>展开</u></string>
+    <string name="instruction">温馨提示\n1. 您可以按需要的旅途来修改详情。\n2. 您可以按垃圾桶图标完成删除当前旅途。 \n3. 您可以通过搜索栏搜索和筛选全部旅途目的地。
+    </string>
+
+    <!--    home page-->
+    <string name="home">首页</string>
+    <string name="carpool">拼车</string>
+    <string name="profile">我的</string>
+    <string name="hello_home">你好</string>
+    <string name="upcoming_trips">预约记录</string>
+    <string name="existing_trips">历史记录</string>
+    <string name="about_carpooling">关于拼车</string>
+    <string name="other">其他</string>
+    <string name="savemoney_caption">拼车可以为您节省金钱与时间</string>
+
+    <!--    carpool page-->
+    <string name="carpooling_title">拼车</string>
+    <string name="carpooling_caption">拼车是共享汽车行程，让多人乘坐一辆车出行。</string>
+    <string name="yourtrip_title">你的出行</string>
+    <string name="yourtrip_caption">查看，编辑或者取消您的出行随你喜欢！</string>
+    <string name="createtrip_title">添加出行</string>
+    <string name="createtrip_caption">马上添加您的共享出行！</string>
+
+    <!--    profile page-->
+    <string name="acc_info">账户信息</string>
+    <string name="verify_document">文件验证</string>
+    <string name="car_info">汽车信息</string>
+    <string name="activity">活动记录</string>
+    <string name="report">账户报告</string>
+    <string name="setting">设置</string>
+    <string name="logout">登出</string>
+    <string name="faq">FAQs</string>
+
+    <!--    login page-->
+    <string name="login_title">登入</string>
+    <string name="login_caption">登入进您的账号</string>
+    <string name="email_input">邮箱</string>
+    <string name="password_input">密码</string>
+
+    <!--    sign up page-->
+    <string name="student_id">学生编号</string>
+    <string name="sign_up_title">注册</string>
+    <string name="sign_up_caption">注册一个新账号</string>
+    <string name="input_name">名字</string>
+    <string name="input_phone">电话号码</string>
+
+    <string name="front">正面</string>
+    <string name="back">背面</string>
+    <string name="selfie">自拍</string>
+    <string name="front_caption">请提供您证身份证的<b>正面</b>。</string>
+    <string name="back_caption">请提供您证身份证的<b>背面</b>。</string>
+    <string name="selfie_caption">最后来个愉快的<b>自拍</b>。</string>
+    <string name="verify_caption"><u>点击这里验证身份证号码</u></string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="reset_password">重置密码</string>
+    <string name="reset">重置</string>
+
+    <string name="car_grant_caption">请提供汽车持有证明。</string>
+    <string name="verify_car_caption"><u>点击此处验证您的持有证</u></string>
+
+
+
+
+</resources>

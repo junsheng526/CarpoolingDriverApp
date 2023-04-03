@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "47397346307",
+    "firebase_url": "https://tarumt-carpooling-e5059-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tarumt-carpooling-e5059",
+    "storage_bucket": "tarumt-carpooling-e5059.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47397346307:android:01ccb5a27a2926a8be4236",
+        "android_client_info": {
+          "package_name": "com.example.carpoolingdriverappv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8b4zj7rbet47sBgeDqFavmts0CfCVtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47397346307:android:979173d25582a49ebe4236",
+        "android_client_info": {
+          "package_name": "com.example.driverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8b4zj7rbet47sBgeDqFavmts0CfCVtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47397346307:android:746967170b231290be4236",
+        "android_client_info": {
+          "package_name": "com.example.tarumtcarpoolingdriverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8b4zj7rbet47sBgeDqFavmts0CfCVtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47397346307:android:044b1eb5329ff78abe4236",
+        "android_client_info": {
+          "package_name": "com.tarumt.driversapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8b4zj7rbet47sBgeDqFavmts0CfCVtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47397346307-dpti7m2b3rrvc22lk39poi22fi0fe4d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

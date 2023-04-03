@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GenerateTripInvoice">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:fontFamily="@font/apple"
+        android:text="End Trip Successfully!"
+        android:textColor="@color/appleBlack"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/apple"
+        android:text="TRIP DETAILS"
+        android:textColor="@color/appleBlack"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="TRIP ID "
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tripIdTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:gravity="end"
+            android:text="1234567890"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="DATE TIME "
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tripDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:fontFamily="@font/apple"
+            android:text="Wed, 1 June 2022"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="FROM "
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/pickupTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:text="TARUMT GATE 2"
+            android:textColor="@color/appleBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="TO "
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/dropoffTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:gravity="end"
+            android:text="PRIMA SETAPAK"
+            android:textSize="18sp"
+            android:textColor="@color/appleBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="FARES "
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/faresTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:text="RM2.00"
+            android:gravity="end"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/apple"
+        android:text="Send Trip Invoice to Passengers?"
+        android:textColor="@color/appleBlack"
+        android:textSize="18sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdownPsgName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/psgName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apple"
+            android:editable="false"
+            android:hint="Passenger Name" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pdfBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_button02"
+        android:backgroundTint="@color/appleBlack"
+        android:fontFamily="@font/apple"
+        android:text="1 - Download As PDF"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="2 - Preview Invoice"
+        android:background="@drawable/shape_button02"
+        android:backgroundTint="@color/appleBlack"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/apple"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="3 - Share Invoice"
+        android:background="@drawable/shape_button02"
+        android:backgroundTint="@color/appleBlack"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/apple"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

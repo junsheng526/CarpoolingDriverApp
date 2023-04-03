@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ViewTripDetailsActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:padding="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/apple"
+            android:text="Trip Details"
+            android:textColor="@color/appleBlack"
+            android:textSize="23sp" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tripIdTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/apple"
+            android:text="TRIP ID: 1234567890"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tripDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/apple"
+            android:text="Wed, 1 June 2022"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tripTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/apple"
+            android:text="11:45"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tripIdTv" />
+
+        <ImageView
+            android:id="@+id/pickupIcon"
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_baseline_pickup"
+            app:layout_constraintBottom_toBottomOf="@+id/tripTime"
+            app:layout_constraintStart_toEndOf="@+id/tripTime"
+            app:layout_constraintTop_toTopOf="@+id/tripTime" />
+
+        <TextView
+            android:id="@+id/pickupTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="TARUMT GATE 2"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toEndOf="@+id/pickupIcon"
+            app:layout_constraintTop_toTopOf="@+id/pickupIcon" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="@+id/pickupIcon"
+            app:layout_constraintStart_toStartOf="@+id/pickupIcon"
+            app:layout_constraintTop_toBottomOf="@+id/pickupIcon" />
+
+        <TextView
+            android:id="@+id/estimatedTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="11:55"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/dropoffIcon"
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:src="@drawable/dropoff_2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/dropoffTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="PRIMA SETAPAK"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/dropoffIcon"
+            app:layout_constraintStart_toEndOf="@+id/dropoffIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/apple"
+            android:text="Passenger Name List"
+            android:textColor="@color/appleBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/estimatedTimeTv" />
+
+        <TextView
+            android:id="@+id/faresTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/apple"
+            android:text="RM2.00 Per Pax"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/textView6"/>
+
+
+        <TextView
+            android:id="@+id/psg1Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/apple"
+            android:text="CHOO JUN SHENG"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+        <TextView
+            android:id="@+id/psg2Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="TAN EE HENG"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psg1Tv" />
+
+        <TextView
+            android:id="@+id/psg3Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="HII PUONG HOU"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psg2Tv" />
+
+        <TextView
+            android:id="@+id/psg4Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/apple"
+            android:text="NIELSEN LAU MU HER"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psg3Tv" />
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/passengerListRv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+<!--            tools:itemCount="4"-->
+<!--            tools:listitem="@layout/row_passenger_list" />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/endTripBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_button02"
+            android:backgroundTint="@color/appleBlack"
+            android:fontFamily="@font/apple"
+            android:text="End Trip"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psg4Tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editTripBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_button02"
+            android:fontFamily="@font/apple"
+            android:text="Edit Trip"
+            android:textAllCaps="false"
+            android:textColor="@color/appleBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/endTripBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/endTripBtn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/testBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button02"
+            android:backgroundTint="@color/appleBlack"
+            android:fontFamily="@font/apple"
+            android:text="Send Invoice Test"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endTripBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

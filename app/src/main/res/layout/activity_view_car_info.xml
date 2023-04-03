@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appleGray"
+    tools:context=".ViewCarInfoActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:padding="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/apple"
+            android:text="Car Information"
+            android:textColor="@color/appleBlack"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:id="@+id/editCarBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_border_color_24"
+            android:padding="14dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/carImg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/car_info_1"/>
+
+    <TextView
+        android:id="@+id/carModelTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:text="Honda Civic Type-R"/>
+
+    <TextView
+        android:id="@+id/carNoPlateTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="RKL3755"/>
+
+    <TextView
+        android:id="@+id/carColorTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="Black"/>
+
+    <Button
+        android:id="@+id/testCarGrant"
+        android:text="CAR GRANT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

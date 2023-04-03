@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">TARUMT Carpooling Driver</string>
+    <string name="no_account">Not have account? <b>SignUp</b></string>
+    <string name="have_account">Already have account? <b>Login</b></string>
+    <string name="expand"><u>Expand All</u></string>
+
+    <!--    home page-->
+    <string name="home">Home</string>
+    <string name="carpool">Carpool</string>
+    <string name="profile">Profile</string>
+    <string name="hello_home">Hello</string>
+    <string name="upcoming_trips">Upcoming Trips</string>
+    <string name="existing_trips">Existing Trips</string>
+    <string name="about_carpooling">About Carpooling</string>
+    <string name="other">Others</string>
+    <string name="savemoney_caption">Ridesharing can save time and money for you</string>
+
+    <!--    carpool page-->
+    <string name="carpooling_title">Carpooling</string>
+    <string name="carpooling_caption">Carpooling is the sharing of car journeys so that more than one person travels in a car.</string>
+    <string name="yourtrip_title">Your Trip</string>
+    <string name="yourtrip_caption">View your trip, editing or cancel your trip as you want!</string>
+    <string name="createtrip_title">Create Trip</string>
+    <string name="createtrip_caption">Start to create your carpool trip now!</string>
+
+    <!--    profile page-->
+    <string name="acc_info">Account Information</string>
+    <string name="verify_document">Verify Document</string>
+    <string name="car_info">Car Information</string>
+    <string name="activity">Activity</string>
+    <string name="report">Report</string>
+    <string name="setting">Settings</string>
+    <string name="logout">Log Out</string>
+    <string name="faq">FAQs</string>
+
+    <!--    login page-->
+    <string name="login_title">Login</string>
+    <string name="login_caption">Login to your account</string>
+    <string name="email_input">Email Address</string>
+    <string name="password_input">Password</string>
+    <string name="API_KEY" translatable="false">AIzaSyDHkKhxFk76c143121_q3Q3eMvoAv3be-I</string>
+    <string name="Mapbox_Token" translatable="false">pk.eyJ1IjoianVuc2hlbmcwNTI2IiwiYSI6ImNsOHJvazB6YTF5dmszdnF3YXVpZ2ZmbnMifQ.LLKZwNikAGPNHVJsIdKbJQ</string>
+
+    <!--    sign up page-->
+    <string name="student_id">Student ID</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_caption">Create a new account</string>
+    <string name="input_name">Name</string>
+    <string name="input_phone">Phone Number</string>
+
+    <!--    verify page-->
+    <string name="front">FRONT</string>
+    <string name="back">BACK</string>
+    <string name="selfie">SELFIE</string>
+    <string name="front_caption">Please provide a Photo of the <b>Front</b> of your Identity Card.</string>
+    <string name="back_caption">Please provide a Photo of the <b>Back</b> of your Identity Card.</string>
+    <string name="selfie_caption">Finally we just need a <b>Selfie</b> of you straight on.</string>
+    <string name="verify_caption"><u>Click Here to Verify Identity Card Number</u></string>
+
+    <string name="instruction">Instruction\n1. Click on the trip to edit the trip.\n2. Click the recycle bin icon to delete the trip. \n3. Search function to search and filter the drop off location.\n4. The system will auto end the trip if the driver no end trip after 2 hours.
+    </string>
+    <string-array name="location">
+        <item>TARUMT Main Gate</item>
+        <item>TARUMT Gate 7</item>
+        <item>TARUMT Gate 4</item>
+        <item>LRT Wangsa Maju</item>
+        <item>PV9</item>
+        <item>PV12</item>
+        <item>PV15</item>
+        <item>PV16</item>
+        <item>PV128</item>
+        <item>Prima Setapak</item>
+    </string-array>
+    <string-array name="seats">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="forget_password">Forget your password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset">Reset</string>
+    <string name="car_grant_caption">Please provide a Photo of the <b>Front</b> of your Car Grant.</string>
+    <string name="verify_car_caption"><u>Click Here to Verify Car Grant Information</u></string>
+</resources>
