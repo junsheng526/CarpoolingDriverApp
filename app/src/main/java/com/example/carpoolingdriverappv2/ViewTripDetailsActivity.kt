@@ -62,7 +62,7 @@ class ViewTripDetailsActivity : AppCompatActivity() {
 
 
         firebaseAuth = FirebaseAuth.getInstance()
-        loadTripInfo()
+//        loadTripInfo()
         loadPassengerInfo()
 
         binding.editTripBtn.setOnClickListener {
@@ -83,24 +83,24 @@ class ViewTripDetailsActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        binding.testBtn.setOnClickListener {
-            val intent = Intent(this, GenerateTripInvoice::class.java)
-            intent.putExtra("tripId", tripId)
-            intent.putExtra("pickup", pickup)
-            intent.putExtra("dropoff", dropoff)
-            intent.putExtra("tripDateTime", tripDateTime)
-            intent.putExtra("tripDate", tripDate)
-            intent.putExtra("tripTime", tripTime)
-            intent.putExtra("fares", fares)
-            intent.putExtra("uid", uid)
-            intent.putExtra("passengerName1", passengerName1)
-            intent.putExtra("passengerName2", passengerName2)
-            intent.putExtra("passengerName3", passengerName3)
-            intent.putExtra("passengerName4", passengerName4)
-
-            startActivity(intent)
-            finish()
-        }
+//        binding.testBtn.setOnClickListener {
+//            val intent = Intent(this, GenerateTripInvoice::class.java)
+//            intent.putExtra("tripId", tripId)
+//            intent.putExtra("pickup", pickup)
+//            intent.putExtra("dropoff", dropoff)
+//            intent.putExtra("tripDateTime", tripDateTime)
+//            intent.putExtra("tripDate", tripDate)
+//            intent.putExtra("tripTime", tripTime)
+//            intent.putExtra("fares", fares)
+//            intent.putExtra("uid", uid)
+//            intent.putExtra("passengerName1", passengerName1)
+//            intent.putExtra("passengerName2", passengerName2)
+//            intent.putExtra("passengerName3", passengerName3)
+//            intent.putExtra("passengerName4", passengerName4)
+//
+//            startActivity(intent)
+//            finish()
+//        }
 
         binding.endTripBtn.setOnClickListener {
             endTrip(tripDateTime)
@@ -173,7 +173,12 @@ class ViewTripDetailsActivity : AppCompatActivity() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val name = "${snapshot.child("username").value}"
-                    passengerName1 = name.uppercase()
+                    if (name != "null"){
+                        passengerName1 = name.uppercase()
+                    }
+                    else{
+                        passengerName1 = "Empty Seat"
+                    }
                     binding.psg1Tv.text = passengerName1
                 }
 
@@ -190,7 +195,12 @@ class ViewTripDetailsActivity : AppCompatActivity() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val name = "${snapshot.child("username").value}"
-                    passengerName2 = name.uppercase()
+                    if (name != "null"){
+                        passengerName2 = name.uppercase()
+                    }
+                    else{
+                        passengerName2 = "Empty Seat"
+                    }
                     binding.psg2Tv.text = passengerName2
                 }
 
@@ -207,7 +217,12 @@ class ViewTripDetailsActivity : AppCompatActivity() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val name = "${snapshot.child("username").value}"
-                    passengerName3 = name.uppercase()
+                    if (name != "null"){
+                        passengerName3 = name.uppercase()
+                    }
+                    else{
+                        passengerName3 = "Empty Seat"
+                    }
                     binding.psg3Tv.text = passengerName3
                 }
 
@@ -224,7 +239,12 @@ class ViewTripDetailsActivity : AppCompatActivity() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val name = "${snapshot.child("username").value}"
-                    passengerName4 = name.uppercase()
+                    if (name != "null"){
+                        passengerName4 = name.uppercase()
+                    }
+                    else{
+                        passengerName4 = "Empty Seat"
+                    }
                     binding.psg4Tv.text = passengerName4
                 }
 
@@ -298,7 +318,7 @@ class ViewTripDetailsActivity : AppCompatActivity() {
         hashMap["tripDate"] = tripDate
         hashMap["tripTime"] = tripTime
         hashMap["tripDateTime"] = tripDateTime
-        hashMap["noOfSeats"] = noOfSeats
+        hashMap["noOfSeats"] = noOfSeats.toString()
         hashMap["uid"] = uid
         hashMap["fares"] = fares
         hashMap["status"] = "Completed"
@@ -317,30 +337,30 @@ class ViewTripDetailsActivity : AppCompatActivity() {
     }
 
 
-    private fun loadTripInfo() {
-        val ref = FirebaseDatabase.getInstance().getReference("Trips")
-        ref.child(tripId)
-            .addValueEventListener(object: ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    //get trip info
-                    val id = "${snapshot.child("id").value}"
-                    val tripDate = "${snapshot.child("tripDate").value}"
-                    val tripTime = "${snapshot.child("tripTime").value}"
-                    val fares = "${snapshot.child("fares").value}"
-                    val pickup = "${snapshot.child("pickup").value}"
-                    val dropoff = "${snapshot.child("dropoff").value}"
-
-                    //set data
-                    binding.tripIdTv.text = "TRIP ID: $id"
-                    binding.tripDate.text = tripDate
-                    binding.tripTime.text = tripTime
-                    binding.faresTv.text = "RM%.2f Per Pax".format(fares.toDouble())
-                    binding.pickupTv.text = pickup
-                    binding.dropoffTv.text = dropoff
-                }
-
-                override fun onCancelled(error: DatabaseError) {}
-
-            })
-    }
+//    private fun loadTripInfo() {
+//        val ref = FirebaseDatabase.getInstance().getReference("Trips")
+//        ref.child(tripId)
+//            .addValueEventListener(object: ValueEventListener {
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//                    //get trip info
+//                    val id = "${snapshot.child("id").value}"
+//                    val tripDate = "${snapshot.child("tripDate").value}"
+//                    val tripTime = "${snapshot.child("tripTime").value}"
+//                    val fares = "${snapshot.child("fares").value}"
+//                    val pickup = "${snapshot.child("pickup").value}"
+//                    val dropoff = "${snapshot.child("dropoff").value}"
+//
+//                    //set data
+//                    binding.tripIdTv.text = "TRIP ID: $id"
+//                    binding.tripDate.text = tripDate
+//                    binding.tripTime.text = tripTime
+//                    binding.faresTv.text = "RM%.2f Per Pax".format(fares.toDouble())
+//                    binding.pickupTv.text = pickup
+//                    binding.dropoffTv.text = dropoff
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {}
+//
+//            })
+//    }
 }

@@ -238,4 +238,27 @@
         android:fontFamily="@font/apple"
         android:layout_marginTop="10dp"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/homeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Return Home"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_button02"
+            android:backgroundTint="@color/appleBlack"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/apple"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
 </LinearLayout>

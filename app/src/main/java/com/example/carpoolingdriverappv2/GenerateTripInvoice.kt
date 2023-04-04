@@ -99,6 +99,12 @@ class GenerateTripInvoice : AppCompatActivity() {
 
         }
 
+        binding.homeBtn.setOnClickListener {
+            val intent = Intent(this@GenerateTripInvoice, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         binding.sendBtn.setOnClickListener {
             val mFileName = "$tripId-$passengerName"
 

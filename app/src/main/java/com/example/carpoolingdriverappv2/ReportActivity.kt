@@ -95,7 +95,9 @@ class ReportActivity : AppCompatActivity() {
     }
 
     private fun updateUIWithTotals(totalFares: Double, totalFaresThisMonth: Double) {
-        binding.totalFaresTv.text = totalFares.toString()
-        binding.totalFaresMonthTv.text = totalFaresThisMonth.toString()
+        val faresTotal = String.format("RM%.2f",totalFares)
+        val faresTotalMonth = String.format("RM%.2f",totalFaresThisMonth)
+        binding.totalFaresTv.text = faresTotal
+        binding.totalFaresMonthTv.text = faresTotalMonth
     }
 }

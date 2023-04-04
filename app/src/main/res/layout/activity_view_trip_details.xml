@@ -246,20 +246,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/endTripBtn" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/testBtn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_button02"
-            android:backgroundTint="@color/appleBlack"
-            android:fontFamily="@font/apple"
-            android:text="Send Invoice Test"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/endTripBtn" />
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/testBtn"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/shape_button02"-->
+<!--            android:backgroundTint="@color/appleBlack"-->
+<!--            android:fontFamily="@font/apple"-->
+<!--            android:text="Send Invoice Test"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/endTripBtn" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

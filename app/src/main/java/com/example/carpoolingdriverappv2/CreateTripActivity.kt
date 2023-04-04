@@ -326,22 +326,22 @@ class CreateTripActivity : AppCompatActivity() {
 
         val childHashMap = HashMap<String, Any>()
         if(noOfSeats.toInt() == 1){
-            childHashMap["passenger1"] = ""
+            childHashMap["passenger1"] = "Empty Seat"
         }
         else if (noOfSeats.toInt() == 2){
-            childHashMap["passenger1"] = ""
-            childHashMap["passenger2"] = ""
+            childHashMap["passenger1"] = "Empty Seat"
+            childHashMap["passenger2"] = "Empty Seat"
         }
         else if (noOfSeats.toInt() == 3){
-            childHashMap["passenger1"] = ""
-            childHashMap["passenger2"] = ""
-            childHashMap["passenger3"] = ""
+            childHashMap["passenger1"] = "Empty Seat"
+            childHashMap["passenger2"] = "Empty Seat"
+            childHashMap["passenger3"] = "Empty Seat"
         }
         else if (noOfSeats.toInt() == 4){
-            childHashMap["passenger1"] = ""
-            childHashMap["passenger2"] = ""
-            childHashMap["passenger3"] = ""
-            childHashMap["passenger4"] = ""
+            childHashMap["passenger1"] = "Empty Seat"
+            childHashMap["passenger2"] = "Empty Seat"
+            childHashMap["passenger3"] = "Empty Seat"
+            childHashMap["passenger4"] = "Empty Seat"
         }
 
         val ref = FirebaseDatabase.getInstance().getReference("Trips")
