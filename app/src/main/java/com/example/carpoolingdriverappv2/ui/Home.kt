@@ -140,7 +140,7 @@ class Home : Fragment() {
 
                 if (existingTripArrayList.isNotEmpty()){
                     //sort the arraylist by ascending order so the nearest time will be arraylist[0]
-                    existingTripArrayList.sortByDescending { it.tripDateTime }
+                    existingTripArrayList.sortByDescending { convertStringtoDateTime(it.tripDateTime) }
 
                     val model = existingTripArrayList[0]
                     val id = model.id
@@ -171,6 +171,7 @@ class Home : Fragment() {
 
         })
     }
+
 
 
     private fun loadUserInfo() {

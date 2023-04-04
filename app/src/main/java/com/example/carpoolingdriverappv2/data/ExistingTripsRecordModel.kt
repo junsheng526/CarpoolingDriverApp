@@ -10,6 +10,7 @@ class ExistingTripsRecordModel {
     var tripDateTime:String = ""
     var noOfSeats:String = ""
     var uid:String = ""
+    var fares:String = ""
 
     //empty constructor
     constructor()
@@ -23,7 +24,8 @@ class ExistingTripsRecordModel {
         tripTime: String,
         tripDateTime: String,
         noOfSeats: String,
-        uid: String
+        uid: String,
+        fares: String
     ) {
         this.id = id
         this.trip = trip
@@ -34,6 +36,7 @@ class ExistingTripsRecordModel {
         this.tripDateTime = tripDateTime
         this.noOfSeats = noOfSeats
         this.uid = uid
+        this.fares = fares
     }
 
     //parameterized constructor

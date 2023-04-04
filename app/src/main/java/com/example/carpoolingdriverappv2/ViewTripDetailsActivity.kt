@@ -11,6 +11,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.time.LocalDateTime
+import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 class ViewTripDetailsActivity : AppCompatActivity() {
@@ -127,7 +128,7 @@ class ViewTripDetailsActivity : AppCompatActivity() {
     private fun checkTripDateTime(tripDateTime: String): Boolean{
 
         //check current date
-        val now = LocalDateTime.now()
+        val now = LocalDateTime.now(ZoneId.of("Asia/Kuala_Lumpur"))
 
         val formatter = DateTimeFormatter.ofPattern("dd MMM yyyy, HH:mm")
 
