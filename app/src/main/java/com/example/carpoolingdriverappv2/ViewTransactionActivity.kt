@@ -47,29 +47,29 @@ class ViewTransactionActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        binding.filterDateDialog.setOnClickListener {
-            val dialog = BottomSheetDialog(this)
-            val view = layoutInflater.inflate(R.layout.filter_date_dialog, null)
-
-            val close = view.findViewById<ImageView>(R.id.cancelBtn)
-            close.setOnClickListener {
-                dialog.dismiss()
-            }
-
-            dialog.setContentView(view)
-            dialog.show()
-
-
-            val todayFilter = view.findViewById<CardView>(R.id.todayFilterBtn)
-            todayFilter.setOnClickListener {
-
-            }
-            val yesterdayFilter = view.findViewById<CardView>(R.id.yesterdayFilter)
-            yesterdayFilter.setOnClickListener {
-
-            }
-
-        }
+//        binding.filterDateDialog.setOnClickListener {
+//            val dialog = BottomSheetDialog(this)
+//            val view = layoutInflater.inflate(R.layout.filter_date_dialog, null)
+//
+//            val close = view.findViewById<ImageView>(R.id.cancelBtn)
+//            close.setOnClickListener {
+//                dialog.dismiss()
+//            }
+//
+//            dialog.setContentView(view)
+//            dialog.show()
+//
+//
+//            val todayFilter = view.findViewById<CardView>(R.id.todayFilterBtn)
+//            todayFilter.setOnClickListener {
+//
+//            }
+//            val yesterdayFilter = view.findViewById<CardView>(R.id.yesterdayFilter)
+//            yesterdayFilter.setOnClickListener {
+//
+//            }
+//
+//        }
 
         binding.filterTxnDesc.setOnClickListener {
             val dialog = BottomSheetDialog(this)

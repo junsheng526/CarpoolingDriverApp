@@ -37,7 +37,6 @@ class SettingActivity : AppCompatActivity() {
 
         binding.changePwBtn.setOnClickListener {
             startActivity(Intent(this, ChangePasswordActivity::class.java))
-            finish()
         }
 
         val switch: SwitchCompat = findViewById(R.id.theme)

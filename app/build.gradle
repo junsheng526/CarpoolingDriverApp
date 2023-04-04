@@ -93,5 +93,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-messaging:23.1.2'
 
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 
 }

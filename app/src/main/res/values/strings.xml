@@ -57,7 +57,7 @@
     <string name="selfie_caption">Finally we just need a <b>Selfie</b> of you straight on.</string>
     <string name="verify_caption"><u>Click Here to Verify Identity Card Number</u></string>
 
-    <string name="instruction">Instruction\n1. Click on the trip to edit the trip.\n2. Click the recycle bin icon to delete the trip. \n3. Search function to search and filter the drop off location.\n4. The system will auto end the trip if the driver no end trip after 2 hours.
+    <string name="instruction">Instruction\n1. Click on the trip to edit the trip.\n2. Click the cancel trip to cancel the trip. \n3. Search function to search and filter the drop off location.\n4. The system will auto end the trip if the driver no end trip after 2 hours.
     </string>
     <string-array name="location">
         <item>TARUMT Main Gate</item>

@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -51,7 +52,6 @@
             android:fontFamily="@font/apple"
             android:text="RM0.00"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/appleBlack"
             android:textSize="23sp" />
 
         <TextView
@@ -69,10 +69,64 @@
             android:fontFamily="@font/apple"
             android:text="RM0.00"
             android:layout_marginBottom="10dp"
+            android:textSize="23sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/apple"
+            android:text="Pie Chart in Percentage"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/appleBlack"
             android:textSize="23sp" />
 
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="300dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pieChart"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic__circle"
+                android:drawableTint="@color/purple_200"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="This Month Total Income"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic__circle"
+                android:drawableTint="@color/Cyan"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Previous Month Total Income"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
 
 
 
