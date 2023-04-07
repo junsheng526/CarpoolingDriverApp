@@ -20,6 +20,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.messaging.FirebaseMessaging
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -141,7 +144,21 @@ class SignUpActivity : AppCompatActivity() {
                 val databaseRef = database.reference.child("users").child(firebaseAuth.currentUser!!.uid)
                 val users : Users = Users(name, phone, studentId, email, walletBal, rating, profileImage)
 
-                databaseRef.setValue(users).addOnCompleteListener {
+//                val name = name
+//                val phone = phone
+//                val studentId = studentId
+//                val email = email
+//                val walletBal = walletBal
+
+                val hashMap = HashMap<String, Any>()
+                hashMap["name"] = name
+                hashMap["phone"] = phone
+                hashMap["studentId"] = studentId
+                hashMap["email"] = email
+                hashMap["walletBal"] = walletBal
+                hashMap["profileImage"] = profileImage
+
+                databaseRef.setValue(hashMap).addOnCompleteListener {
                     if (it.isSuccessful){
                         progressDialog.dismiss()
                         //get current user
@@ -158,6 +175,13 @@ class SignUpActivity : AppCompatActivity() {
                         Toast.makeText(this, "SignUp Failed", Toast.LENGTH_SHORT).show()
                     }
                 }
+                val hashMapChild = HashMap<String, Any>()
+
+                hashMapChild["average"] = 0
+                hashMapChild["count"] = 0
+                databaseRef.child("rating").setValue(hashMapChild)
+
+
             }else {
                 try {
                     throw it.exception!!
