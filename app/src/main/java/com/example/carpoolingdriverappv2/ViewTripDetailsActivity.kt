@@ -62,7 +62,7 @@ class ViewTripDetailsActivity : AppCompatActivity() {
 
 
         firebaseAuth = FirebaseAuth.getInstance()
-//        loadTripInfo()
+        loadTripInfo()
         loadPassengerInfo()
 
         binding.editTripBtn.setOnClickListener {
@@ -337,30 +337,30 @@ class ViewTripDetailsActivity : AppCompatActivity() {
     }
 
 
-//    private fun loadTripInfo() {
-//        val ref = FirebaseDatabase.getInstance().getReference("Trips")
-//        ref.child(tripId)
-//            .addValueEventListener(object: ValueEventListener {
-//                override fun onDataChange(snapshot: DataSnapshot) {
-//                    //get trip info
-//                    val id = "${snapshot.child("id").value}"
-//                    val tripDate = "${snapshot.child("tripDate").value}"
-//                    val tripTime = "${snapshot.child("tripTime").value}"
-//                    val fares = "${snapshot.child("fares").value}"
-//                    val pickup = "${snapshot.child("pickup").value}"
-//                    val dropoff = "${snapshot.child("dropoff").value}"
-//
-//                    //set data
-//                    binding.tripIdTv.text = "TRIP ID: $id"
-//                    binding.tripDate.text = tripDate
-//                    binding.tripTime.text = tripTime
-//                    binding.faresTv.text = "RM%.2f Per Pax".format(fares.toDouble())
-//                    binding.pickupTv.text = pickup
-//                    binding.dropoffTv.text = dropoff
-//                }
-//
-//                override fun onCancelled(error: DatabaseError) {}
-//
-//            })
-//    }
+    private fun loadTripInfo() {
+        val ref = FirebaseDatabase.getInstance().getReference("Trips")
+        ref.child(tripId)
+            .addValueEventListener(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    //get trip info
+                    val id = "${snapshot.child("id").value}"
+                    val tripDate = "${snapshot.child("tripDate").value}"
+                    val tripTime = "${snapshot.child("tripTime").value}"
+                    val fares = "${snapshot.child("fares").value}"
+                    val pickup = "${snapshot.child("pickup").value}"
+                    val dropoff = "${snapshot.child("dropoff").value}"
+
+                    //set data
+                    binding.tripIdTv.text = "TRIP ID: $id"
+                    binding.tripDate.text = tripDate
+                    binding.tripTime.text = tripTime
+                    binding.faresTv.text = "RM%.2f Per Pax".format(fares.toDouble())
+                    binding.pickupTv.text = pickup
+                    binding.dropoffTv.text = dropoff
+                }
+
+                override fun onCancelled(error: DatabaseError) {}
+
+            })
+    }
 }
