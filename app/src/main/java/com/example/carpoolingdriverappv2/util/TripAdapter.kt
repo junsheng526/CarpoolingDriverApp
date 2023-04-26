@@ -127,6 +127,7 @@ class TripAdapter :RecyclerView.Adapter<TripAdapter.HolderTrip>, Filterable{
         hashMap["tripDateTime"] = model.tripDateTime
         hashMap["noOfSeats"] = model.noOfSeats
         hashMap["uid"] = model.uid
+        hashMap["fares"] = model.fares
         hashMap["status"] = "Completed"
 
 
